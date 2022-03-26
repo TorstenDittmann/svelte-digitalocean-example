@@ -1,11 +1,9 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from 'svelte-adapter-static-digitalocean';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter({
-			fallback: '404.html'
-		}),
+		adapter: adapter(),
 
 		// Override http methods in the Todo forms
 		methodOverride: {
